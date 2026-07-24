@@ -1,0 +1,29 @@
+{% if page.contacts_section.enable %}
+<section id="contacts" class="wrapper contacts-caravel overflow-hidden position-relative">
+  <img src="{{ '/assets/img/hero_image.png' | relative_url }}" alt="" class="contacts-caravel-bg">
+  <div class="container py-14 py-md-16 position-relative">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="contacts-caravel-title mb-3">{{ page.contacts_section.title }}</h2>
+        <p class="contacts-caravel-subtitle mb-9">{{ page.contacts_section.subtitle }}</p>
+        {% for item in page.contacts_section.items %}
+        <div class="d-flex mb-7">
+          <div class="contacts-caravel-icon me-4"><i class="uil {{ item.icon }}"></i></div>
+          <div>
+            <h5 class="contacts-caravel-label mb-1">{{ item.label }}</h5>
+            {% if item.url %}
+            <a href="{{ item.url }}" class="contacts-caravel-value">{{ item.value }}</a>
+            {% else %}
+            <p class="contacts-caravel-value mb-0">{{ item.value }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}

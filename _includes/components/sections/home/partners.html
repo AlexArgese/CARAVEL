@@ -1,0 +1,14 @@
+{% if page.partners.enable %}
+<section class="wrapper bg-soft-ash">
+  <div class="container py-10">
+    <div class="row justify-content-center justify-content-lg-between align-items-center gy-6 text-center">
+      {% for logo in page.partners.logos %}
+      <div class="col-6 col-lg-auto">
+        <img src="{{ logo.image | relative_url }}" alt="{{ logo.alt }}" class="partner-logo">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}

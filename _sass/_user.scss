@@ -1,0 +1,474 @@
+// Use this to write your custom SCSS
+.accordion-wrapper .card-header button {
+    box-shadow: none;
+}
+
+// Extra side breathing room across the site
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 1400px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+// Hero section
+.hero-caravel .row {
+  min-height: 340px;
+}
+@media (min-width: 992px) {
+  .hero-caravel .row {
+    min-height: 520px;
+  }
+}
+.hero-caravel-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #075a80;
+  max-width: 22ch;
+}
+.hero-caravel-subtitle {
+  color: #3d6072;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 30rem;
+}
+.text-caravel-coral {
+  color: #ff6062;
+}
+.text-caravel-navy {
+  color: #075a80;
+}
+
+// News section (home)
+.news-section-icon {
+  height: 30px;
+  width: auto;
+}
+.text-line.text-caravel-coral:before {
+  background: #ff6062;
+}
+.news-card-img {
+  background-color: #d9d9d9;
+  aspect-ratio: 5 / 4;
+}
+.news-card-date {
+  color: #3d6072;
+  font-size: 0.8rem;
+}
+.news-card-text {
+  color: #3d6072;
+  font-size: 0.85rem;
+}
+.news-card-link {
+  color: #ff6062;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.news-card-link:hover {
+  color: #075a80;
+}
+.hero-caravel-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+.btn-caravel-primary {
+  background-color: #075a80;
+  border: 1px solid #075a80;
+  color: #fff;
+}
+.btn-caravel-primary:hover,
+.btn-caravel-primary:focus {
+  background-color: #054a67;
+  border-color: #054a67;
+  color: #fff;
+}
+.btn-caravel-outline {
+  background-color: #fff;
+  border: 1px solid #075a80;
+  color: #075a80;
+}
+.btn-caravel-outline:hover,
+.btn-caravel-outline:focus {
+  background-color: #eef5f8;
+  color: #075a80;
+}
+
+// Partner / funding logos strip
+.partner-logo {
+  max-height: 38px;
+  width: auto;
+}
+
+// Research section (home)
+.research-caravel {
+  background-color: #0d425a;
+}
+.research-caravel-heading {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.research-caravel-icon {
+  height: 28px;
+  width: auto;
+}
+.research-caravel-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.research-caravel-intro {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.research-caravel-focus {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+.research-card {
+  background: #eef1fa;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.research-card-img-wrap {
+  background: #fff;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+.research-card-img {
+  max-width: 100%;
+  max-height: 170px;
+  object-fit: contain;
+}
+.research-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.research-card-title {
+  color: #075a80;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.research-card-text {
+  color: #3d6072;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+// Publications section (home)
+.publications-heading {
+  font-size: 1.25rem;
+}
+.publications-icon {
+  height: 28px;
+  width: auto;
+}
+.pub-filter {
+  background: #fff;
+  border: 1px solid #075a80;
+  color: #075a80;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+}
+.pub-filter:hover {
+  background: #eef1fa;
+  color: #075a80;
+}
+.pub-filter-active,
+.pub-filter-active:hover {
+  background: #075a80;
+  color: #fff;
+  border-color: #075a80;
+}
+.pub-list {
+  background: #eef1fa;
+  border-radius: 1rem;
+  padding: 0.5rem 1.75rem;
+}
+.pub-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+}
+.pub-row-border {
+  border-bottom: 1px solid rgba(7, 90, 128, 0.15);
+}
+.pub-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 95px;
+}
+.pub-date {
+  color: #ff6062;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.pub-tag {
+  background: #075a80;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+.pub-divider {
+  width: 3px;
+  align-self: stretch;
+  background: #ff6062;
+  border-radius: 2px;
+}
+.pub-content {
+  flex: 1 1 320px;
+}
+.pub-title {
+  color: #075a80;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.pub-venue {
+  color: #3d6072;
+  font-size: 0.85rem;
+}
+.pub-action {
+  white-space: nowrap;
+}
+.pub-link {
+  color: #075a80;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.pub-link:hover {
+  color: #ff6062;
+}
+
+// Team section (home)
+.team-heading {
+  font-size: 1.25rem;
+}
+.team-icon {
+  height: 28px;
+  width: auto;
+}
+.team-title {
+  color: #075a80;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.team-description {
+  color: #3d6072;
+  max-width: 560px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.team-card {
+  background: #eef1fa;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.team-avatar {
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #d9d9d9;
+  margin: 0 auto;
+}
+.team-name {
+  color: #075a80;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.team-role {
+  color: #3d6072;
+  font-size: 0.85rem;
+}
+.team-role a {
+  color: #075a80;
+  text-decoration: underline;
+}
+.team-role a:hover {
+  color: #ff6062;
+}
+.team-links {
+  display: flex;
+  gap: 0.85rem;
+}
+.team-links a {
+  color: #075a80;
+  font-size: 1rem;
+}
+.team-links a:hover {
+  color: #ff6062;
+}
+.team-cta {
+  display: flex;
+  border: 1.5px dashed #075a80;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+.team-cta-icon {
+  color: #075a80;
+  font-size: 1.2rem;
+}
+.team-cta-text {
+  color: #075a80;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.team-cta-link {
+  color: #ff6062;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.team-cta:hover .team-cta-link {
+  color: #075a80;
+}
+
+// Contacts section (home)
+.contacts-caravel {
+  background: #eef1fa;
+}
+.contacts-caravel-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
+  opacity: 0.45;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 35%);
+  mask-image: linear-gradient(to right, transparent, black 35%);
+}
+.contacts-caravel-title {
+  color: #075a80;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.contacts-caravel-subtitle {
+  color: #3d6072;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.contacts-caravel-icon {
+  color: #ff6062;
+  font-size: 1.35rem;
+  width: 1.75rem;
+  flex: 0 0 auto;
+}
+.contacts-caravel-label {
+  color: #ff6062;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.contacts-caravel-value {
+  color: #075a80;
+  font-size: 0.85rem;
+}
+a.contacts-caravel-value {
+  text-decoration: underline;
+}
+a.contacts-caravel-value:hover {
+  color: #ff6062;
+}
+
+// Footer
+.caravel-footer {
+  background: #075a80;
+}
+.caravel-footer-logo {
+  height: 30px;
+  width: auto;
+}
+.caravel-footer-copyright {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+}
+.caravel-footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.caravel-footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.caravel-footer-nav a:hover {
+  color: #ff6062;
+}
+.caravel-footer-social {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: flex-end;
+}
+.caravel-footer-social a {
+  color: #ff6062;
+  font-size: 1.1rem;
+}
+.caravel-footer-social a:hover {
+  color: #fff;
+}
+@media (max-width: 991.98px) {
+  .caravel-footer-nav,
+  .caravel-footer-social {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+// Navbar logo (constrain the source image's native size)
+.navbar-brand img {
+  height: 28px;
+  width: auto;
+}
+// Don't let the brand's forced w-100 reserve empty space and shove the nav links off-center
+.navbar .navbar-brand.w-100 {
+  width: auto !important;
+}
+
+// News banner (top announcement bar)
+.news-banner {
+  background-color: #0b5d78;
+  font-size: 0.8rem;
+}
+.news-banner-badge {
+  background-color: #fb6a6a;
+  color: #fff;
+  font-weight: 700;
+  font-size: .8em;
+  padding: .4em 1.1em;
+}
+.news-banner-link {
+  color: #ff8f7e;
+  font-weight: 600;
+  text-decoration: none;
+}
+.news-banner-link:hover {
+  color: #fff;
+}

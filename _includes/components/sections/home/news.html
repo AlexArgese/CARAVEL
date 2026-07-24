@@ -1,0 +1,34 @@
+{% if page.news_section.enable %}
+<section id="news" class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <h2 class="d-flex align-items-center justify-content-center gap-2 display-4 mb-10 text-center">
+      <img src="{{ '/assets/img/brain-icon.png' | relative_url }}" alt="" class="news-section-icon">
+      <span class="text-caravel-navy">CARAVEL Latest</span> <span class="text-caravel-coral">News</span>
+    </h2>
+    <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for item in page.news_section.items %}
+          <div class="swiper-slide">
+            <article>
+              <div class="news-card-img rounded mb-5"></div>
+              <div class="post-header d-flex align-items-center justify-content-between mb-3">
+                <span class="text-line text-caravel-coral text-uppercase fs-13 fw-bold">{{ item.category }}</span>
+                <span class="news-card-date fs-13">{{ item.date }}</span>
+              </div>
+              <h3 class="h4 mb-3"><a class="link-dark" href="{{ item.url }}">{{ item.title }}</a></h3>
+              <p class="news-card-text mb-3">{{ item.text }}</p>
+              <a href="{{ item.url }}" class="news-card-link hover d-inline-flex align-items-center">Read more <i class="uil uil-arrow-right fs-16 ms-1"></i></a>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- /.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}

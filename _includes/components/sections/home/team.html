@@ -1,0 +1,65 @@
+{% if page.team_section.enable %}
+<section id="team" class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <h2 class="d-flex align-items-center justify-content-center gap-2 mb-10 text-center team-heading">
+      <img src="{{ '/assets/img/brain-icon.png' | relative_url }}" alt="" class="team-icon">
+      <span class="text-caravel-navy fw-bold">CARAVEL</span> <span class="text-caravel-navy">Team</span>
+    </h2>
+    <div class="text-center mb-10">
+      <h3 class="team-title mb-3">{{ page.team_section.title }}</h3>
+      <p class="team-description mx-auto mb-0">{{ page.team_section.description }}</p>
+    </div>
+
+    <div class="row gy-6">
+      <div class="col-lg-3">
+        <div class="team-card team-card-featured h-100">
+          <div class="team-avatar mb-5"></div>
+          <h4 class="team-name mb-2">{{ page.team_section.lead.name }}</h4>
+          <p class="team-role mb-4">{{ page.team_section.lead.bio }}</p>
+          <div class="team-links">
+            {% if page.team_section.lead.website %}<a href="{{ page.team_section.lead.website }}"><i class="uil uil-globe"></i></a>{% endif %}
+            {% if page.team_section.lead.linkedin %}<a href="{{ page.team_section.lead.linkedin }}"><i class="uil uil-linkedin-alt"></i></a>{% endif %}
+            {% if page.team_section.lead.scholar %}<a href="{{ page.team_section.lead.scholar }}"><i class="uil uil-graduation-cap"></i></a>{% endif %}
+          </div>
+        </div>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-9">
+        <div class="swiper-container grid-view mb-6" data-margin="24" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for member in page.team_section.members %}
+              <div class="swiper-slide">
+                <div class="team-card h-100">
+                  <div class="team-avatar mb-5"></div>
+                  <h4 class="team-name mb-1">{{ member.name }}</h4>
+                  <p class="team-role mb-4">{{ member.role }}</p>
+                  <div class="team-links">
+                    {% if member.website %}<a href="{{ member.website }}"><i class="uil uil-globe"></i></a>{% endif %}
+                    {% if member.linkedin %}<a href="{{ member.linkedin }}"><i class="uil uil-linkedin-alt"></i></a>{% endif %}
+                    {% if member.scholar %}<a href="{{ member.scholar }}"><i class="uil uil-graduation-cap"></i></a>{% endif %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <!-- /.swiper-wrapper -->
+          </div>
+          <!-- /.swiper -->
+        </div>
+        <!-- /.swiper-container -->
+        <a href="{{ page.team_section.cta.url }}" class="team-cta d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <span class="d-flex align-items-center gap-3">
+            <i class="uil uil-users-alt team-cta-icon"></i>
+            <span class="team-cta-text">{{ page.team_section.cta.text }}</span>
+          </span>
+          <span class="team-cta-link">{{ page.team_section.cta.label }} <i class="uil uil-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}

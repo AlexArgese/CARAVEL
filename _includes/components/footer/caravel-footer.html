@@ -1,0 +1,25 @@
+<footer class="caravel-footer">
+  <div class="container py-11 py-md-13">
+    <div class="row align-items-center gy-8">
+      <div class="col-lg-6">
+        <img src="{{ '/assets/img/caravel_logo_white.png' | relative_url }}" alt="CARAVEL" class="caravel-footer-logo mb-4">
+        <p class="caravel-footer-copyright mb-0">&copy; {{ site.time | date: '%Y' }} CARAVEL. All rights reserved.</p>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <nav class="caravel-footer-nav mb-4">
+          {% for link in page.footer_section.links %}
+          <a href="{{ link.url }}" class="scroll">{{ link.label }}</a>
+          {% endfor %}
+        </nav>
+        <div class="caravel-footer-social">
+          {% for social in page.footer_section.social %}
+          <a href="{{ social.url }}"><i class="uil {{ social.icon }}"></i></a>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</footer>

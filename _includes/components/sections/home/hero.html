@@ -1,0 +1,20 @@
+<section class="wrapper hero-caravel overflow-hidden">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 px-6 px-md-10 px-xl-16 py-12 py-lg-0">
+        <h1 class="hero-caravel-title mb-5">{{ page.hero.title }} <span class="text-caravel-coral">{{ page.hero.title_highlight }}</span></h1>
+        <p class="hero-caravel-subtitle mb-8">{{ page.hero.subtitle }}</p>
+        <div class="d-flex flex-wrap gap-3">
+          {% for button in page.hero.buttons %}
+          <a href="{{ button.url }}" class="btn btn-lg rounded-xl {% if button.style == 'outline' %}btn-caravel-outline{% else %}btn-caravel-primary btn-icon btn-icon-end{% endif %}"{% if button.target %} target="{{ button.target }}"{% endif %}>
+            {{ button.label }}{% if button.icon %} <i class="{{ button.icon }}"></i>{% endif %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="{{ page.hero.image | relative_url }}" class="hero-caravel-img" alt="Visualization of the brain vessel tree">
+      </div>
+    </div>
+  </div>
+</section>
