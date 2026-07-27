@@ -1,0 +1,18 @@
+links:
+  - label: "Research"
+    url: "#research"
+  - label: "News"
+    url: "#news"
+  - label: "Publications"
+    url: "#publications"
+  - label: "Team"
+    url: "#team"
+  - label: "Contacts"
+    url: "#contacts"
+social:
+  - icon: "uil-globe"
+    url: "#"
+  - icon: "uil-linkedin-alt"
+    url: "#"
+  - icon: "uil-graduation-cap"
+    url: "#"

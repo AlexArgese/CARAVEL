@@ -1,10 +1,9 @@
 # General Settings
-site_name: Sandbox
-title: "Sandbox - Modern & Multipurpose Jekyll Theme"
+site_name: CARAVEL
+title: "CARAVEL - Mapping the hidden architecture of the brain"
 description: >- # this means to ignore newlines until "baseurl:"
-  An impressive and flawless site template that includes various UI elements and countless features, attractive
-   ready-made blocks and rich pages, basically everything you need to create a unique and professional website.
-favicon: "/assets/img/favicon.webp"
+  CARAVEL develops reliable AI methods to extract, model and analyse the brain vessel tree across multiple imaging scales.
+favicon: "/assets/img/brain-icon.png"
 
 # Seo Meta Settings
 meta_og_image: "/assets/img/meta-image.webp"
@@ -27,12 +26,9 @@ black_logo_2x: "/assets/img/caravel_logo_blue.png"
 light_logo_1x: "/assets/img/caravel_logo_white.png"
 light_logo_2x: "/assets/img/caravel_logo_white.png"
 
-address: 'Moonshine St. 14/05 Light City, London, United Kingdom'
-address_01: 'Moonshine St. <br>14/05 Light City,<br /> London, United Kingdom'
-phone_number: "+00 (123) 456 78 90"
-phone_number2: "+00 (987) 654 32 10"
-email: "tortoizthemes@gmail.com"
-email_2: "support@tortoizthemes.com"
+address: '450 Route des Chappes - 06410 Biot, France'
+address_01: '450 Route des Chappes<br />06410 Biot, France'
+email: "maria.zuluaga@eurecom.fr"
 copyright: "© 2025 Sandbox."
 copyright_text: "All rights reserved."
 

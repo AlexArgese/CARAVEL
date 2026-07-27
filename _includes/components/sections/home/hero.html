@@ -1,7 +1,7 @@
 <section class="wrapper hero-caravel overflow-hidden">
   <div class="container-fluid px-0">
-    <div class="row g-0 align-items-center">
-      <div class="col-lg-6 px-6 px-md-10 px-xl-16 py-12 py-lg-0">
+    <div class="row g-0">
+      <div class="col-lg-6 d-flex flex-column justify-content-center px-6 px-md-10 px-xl-16 py-12 py-lg-0">
         <h1 class="hero-caravel-title mb-5">{{ page.hero.title }} <span class="text-caravel-coral">{{ page.hero.title_highlight }}</span></h1>
         <p class="hero-caravel-subtitle mb-8">{{ page.hero.subtitle }}</p>
         <div class="d-flex flex-wrap gap-3">
@@ -12,8 +12,14 @@
           {% endfor %}
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 hero-caravel-media">
+        {% if page.hero.use_video and page.hero.video %}
+        <video class="hero-caravel-img" autoplay muted playsinline poster="{{ page.hero.image | relative_url }}">
+          <source src="{{ page.hero.video | relative_url }}" type="video/mp4">
+        </video>
+        {% else %}
         <img src="{{ page.hero.image | relative_url }}" class="hero-caravel-img" alt="Visualization of the brain vessel tree">
+        {% endif %}
       </div>
     </div>
   </div>

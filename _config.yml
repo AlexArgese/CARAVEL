@@ -37,26 +37,13 @@ toc:
 
 # Pagination
 pagination:
-  enabled: true
-  debug: true
-  collections:
-    - name: 'projects'
-      per_page: 9
-      permalink: '/projects/page:num/'
-      title: ':title - Page :num'
-    - name: 'posts'
-      per_page: 6
-      permalink: '/blog/page:num/'
-      title: ':title - Page :num'
+  enabled: false
 
 # Collections
 collections:
-  projects:
+  news:
     output: true
-    permalink: /projects/:path/
-  authors:
-    output: true
-    permalink: /authors/:path/
+    permalink: /news/:name/
 
 # Defaults
 defaults:
@@ -66,15 +53,10 @@ defaults:
       layout: "default"
   - scope:
       path: ""
-      type: "posts"
+      type: "news"
     values:
-      layout: "post"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-      
+      layout: "news"
+
 
 # Exclude from processing and watching
 exclude:

@@ -35,12 +35,12 @@
       </a>
     </div>
     <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-      <!-- DEBUG START -->
       <div class="offcanvas-header d-lg-none">
-        <h3 class="text-white fs-30 mb-0">{{ site.data.theme.site_name | default: 'Sandbox' }}</h3>
-        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <a href="{{ '/' | relative_url }}" class="offcanvas-brand">
+          <img src="{{ site.data.theme.black_logo_1x | relative_url }}" alt="{{ site.data.theme.site_name }}">
+        </a>
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <!-- DEBUG END -->
       <div class="offcanvas-body {% if include.centerNav %}ms-lg-auto{% endif %} d-flex flex-column h-100">
         {% if include.onePage %}
           <!-- One Page Navigation -->
@@ -55,14 +55,18 @@
           <!-- Standard Navigation -->
           {% include components/navigation/navigation.html centerLogo=include.centerLogo %}
         {% endif %}
-        
+
         <div class="offcanvas-footer d-lg-none">
-          <div>
-            <a href="mailto:{{ site.data.theme.email | default: 'info@email.com' }}" class="link-inverse">{{ site.data.theme.email | default: 'info@email.com' }}</a>
-            <br>{{ site.data.theme.phone_number | default: '00 (123) 456 78 90' }}<br>
-            <nav class="nav social social-white mt-4">
-              {% for social in site.data.theme.social_accounts.links limit:site.data.theme.social_accounts.links_shown %}
-                <a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+          <div class="offcanvas-contact">
+            <a href="mailto:{{ site.data.theme.email }}" class="offcanvas-contact-item">
+              <i class="uil uil-envelope"></i> {{ site.data.theme.email }}
+            </a>
+            <span class="offcanvas-contact-item">
+              <i class="uil uil-location-pin-alt"></i> {{ site.data.theme.address }}
+            </span>
+            <nav class="nav social offcanvas-social mt-4">
+              {% for social in site.data.footer.social %}
+                <a href="{{ social.url }}"><i class="uil {{ social.icon }}"></i></a>
               {% endfor %}
             </nav>
           </div>

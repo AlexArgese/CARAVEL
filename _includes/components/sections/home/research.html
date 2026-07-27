@@ -5,25 +5,26 @@
       <img src="{{ '/assets/img/brain-icon.png' | relative_url }}" alt="" class="research-caravel-icon">
       <span class="fw-bold">CARAVEL</span> Research
     </h2>
-    <div class="row align-items-center mb-8 gy-6">
-      <div class="col-lg-7">
-        <h3 class="research-caravel-title mb-0">{{ page.research_section.title }}</h3>
-      </div>
-      <div class="col-lg-5">
-        <p class="research-caravel-intro mb-0">{{ page.research_section.description }}</p>
+    <div class="row justify-content-center text-center mb-8">
+      <div class="col-lg-8">
+        <h3 class="research-caravel-title mb-4">{{ page.research_section.title }}</h3>
+        <p class="research-caravel-intro mx-auto mb-0">{{ page.research_section.description }}</p>
       </div>
     </div>
-    <p class="text-center research-caravel-focus mb-8">{{ page.research_section.focus_label }}</p>
+    <div class="text-center mb-8">
+      <span class="research-caravel-focus text-line">{{ page.research_section.focus_label }}</span>
+    </div>
     <div class="row gy-6">
       {% for item in page.research_section.items %}
       <div class="col-md-4">
         <div class="research-card h-100">
-          <div class="research-card-img-wrap">
+          <div class="research-card-img-wrap hover-scale">
             {% if item.image %}
             <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="research-card-img">
             {% endif %}
           </div>
           <div class="research-card-body">
+            <span class="research-card-number d-block mb-2">0{{ forloop.index }}</span>
             <h4 class="research-card-title mb-3">{{ item.title }}</h4>
             <p class="research-card-text mb-0">{{ item.text }}</p>
           </div>

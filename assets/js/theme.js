@@ -315,15 +315,30 @@ var theme = {
     for(const link of links) {
       link.addEventListener("click", clickHandler);
     }
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
     function clickHandler(e) {
       e.preventDefault();
       this.blur();
       const href = this.getAttribute("href");
-      const offsetTop = document.querySelector(href).offsetTop;
-      scroll({
-        top: offsetTop,
-        behavior: "smooth"
-      });
+      const target = document.querySelector(href);
+      if (!target) return;
+      const startY = window.scrollY;
+      const endY = target.getBoundingClientRect().top + startY;
+      const distance = endY - startY;
+      const duration = Math.min(1200, Math.max(600, Math.abs(distance)));
+      let startTime = null;
+      function step(timestamp) {
+        if (startTime === null) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+      requestAnimationFrame(step);
     }
   },
   /**

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<div class="content-wrapper">
+<header class="w-100">
+{% include components/navbar/navbar.html
+  classList="navbar-light navbar-bg-light"
+  logoAlt="logo-dark"
+  centerNav=true
+  otherClassList="d-flex ms-auto"
+  onePage=true
+%}
+</header>
+<!-- /header -->
+
+<section class="wrapper news-hero">
+  <div class="container py-12 py-md-14">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <span class="news-hero-category text-uppercase fs-13 fw-bold">{{ page.category }}</span>
+        <h1 class="news-hero-title mt-3 mb-4">{{ page.title }}</h1>
+        <div class="news-hero-meta d-flex align-items-center justify-content-center gap-2">
+          <i class="uil uil-calendar-alt"></i><span>{{ page.date | date: "%-d %B %Y" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="news-article-card">
+          {% if page.image %}
+          <div class="news-article-img">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          </div>
+          {% endif %}
+          <div class="news-article-body">
+            <div class="news-article-content">
+              {{ content }}
+            </div>
+            <div class="news-article-footer d-flex align-items-center justify-content-between flex-wrap gap-3">
+              <span class="news-card-date fs-13">Published on {{ page.date | date: "%-d %B %Y" }}</span>
+              <a href="{{ '/' | relative_url }}#news" class="news-card-link hover d-inline-flex align-items-center">
+                <i class="uil uil-arrow-left fs-16 me-1"></i> Back to News
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+{% include components/footer/caravel-footer.html %}
+</div>

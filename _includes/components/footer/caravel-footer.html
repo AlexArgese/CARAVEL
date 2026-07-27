@@ -7,12 +7,16 @@
       </div>
       <div class="col-lg-6 text-lg-end">
         <nav class="caravel-footer-nav mb-4">
-          {% for link in page.footer_section.links %}
+          {% for link in site.data.footer.links %}
+          {% if page.url == '/' %}
           <a href="{{ link.url }}" class="scroll">{{ link.label }}</a>
+          {% else %}
+          <a href="{{ '/' | relative_url }}{{ link.url }}">{{ link.label }}</a>
+          {% endif %}
           {% endfor %}
         </nav>
         <div class="caravel-footer-social">
-          {% for social in page.footer_section.social %}
+          {% for social in site.data.footer.social %}
           <a href="{{ social.url }}"><i class="uil {{ social.icon }}"></i></a>
           {% endfor %}
         </div>

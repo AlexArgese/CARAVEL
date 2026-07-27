@@ -22,6 +22,9 @@ hero:
   title: "Mapping the hidden architecture"
   title_highlight: "of the brain"
   subtitle: "CARAVEL develops reliable AI methods to extract, model and analyse the brain vessel tree across multiple imaging scales."
+  # Set to true to show the animated video instead of the static image below
+  use_video: true
+  video: /assets/video/CARAVEL_hero_video.mp4
   image: /assets/img/hero_image.png
   buttons:
     - label: "Explore the project"
@@ -45,27 +48,11 @@ partners:
 # News Section
 news_section:
   enable: true
-  items:
-    - category: "Publication"
-      date: "12 May 2026"
-      title: "CARAVEL paper accepted at MICCAI 2026"
-      text: "Our latest work on cerebrovascular tree reconstruction has been accepted."
-      url: "#"
-    - category: "Event"
-      date: "28 April 2026"
-      title: "CARAVEL at MICCAI 2025"
-      text: "We presented our recent results in Tokyo, Japan."
-      url: "#"
-    - category: "Opportunity"
-      date: "10 April 2026"
-      title: "PhD position on AI for brain vasculature"
-      text: "Join our team and work on exciting research challenges."
-      url: "#"
 
 # Research Section
 research_section:
   enable: true
-  title: "Understanding the cerebrovascular tree, from <span class=\"text-caravel-coral\">image</span> to <span class=\"text-caravel-coral\">insight</span>."
+  title: "Understanding the cerebrovascular tree, <br/> from <span class=\"text-caravel-coral\">image</span> to <span class=\"text-caravel-coral\">insight</span>."
   description: "CARAVEL studies the cerebrovascular system using advanced imaging and trustworthy AI to extract, model and analyse brain vessel trees across multiple spatial scales."
   focus_label: "Our research focuses on"
   items:
@@ -92,24 +79,42 @@ publications_section:
     - label: "Preprints"
       filter: "preprint"
   items:
+    - date: "Dec 2025"
+      type: "preprint"
+      tag: "Preprint"
+      title: "An Automated Framework for Large-Scale Graph-Based Cerebrovascular Analysis"
+      venue: "arXiv preprint (accepted at IEEE ISBI 2026)"
+      url: "https://arxiv.org/abs/2512.03869"
     - date: "Sep 2025"
       type: "conference"
       tag: "Conference"
       title: "VesselVerse: A Dataset and Collaborative Framework for Vessel Annotation"
       venue: "MICCAI 2025, 28th International Conference on Medical Image Computing and Computer Assisted Intervention"
-      url: "#"
-    - date: "Apr 2024"
+      url: "https://www.eurecom.fr/en/publication/8225"
+    - date: "Feb 2025"
       type: "journal"
       tag: "Journal"
-      title: "Graph representations of the brain vessel tree"
+      title: "FUTURE-AI: International Consensus Guideline for Trustworthy and Deployable Artificial Intelligence in Healthcare"
+      venue: "BMJ"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11832024/"
+    - date: "Jan 2022"
+      type: "journal"
+      tag: "Journal"
+      title: "Vessel-CAPTCHA: An Efficient Learning Framework for Vessel Annotation and Segmentation"
+      venue: "Medical Image Analysis"
+      url: "https://www.sciencedirect.com/science/article/pii/S136184152100308X"
+    - date: "Jun 2018"
+      type: "journal"
+      tag: "Journal"
+      title: "Interactive Medical Image Segmentation Using Deep Learning with Image-Specific Fine-Tuning"
       venue: "IEEE Transactions on Medical Imaging"
-      url: "#"
-    - date: "Oct 2023"
-      type: "preprint"
-      tag: "Preprint"
-      title: "Computational methods for cerebrovascular image understanding"
-      venue: "NeuroImage"
-      url: "#"
+      url: "https://pubmed.ncbi.nlm.nih.gov/29969407/"
+    - date: "Aug 2015"
+      type: "journal"
+      tag: "Journal"
+      title: "Stability, Structure and Scale: Improvements in Multi-Modal Vessel Extraction for SEEG Trajectory Planning"
+      venue: "International Journal of Computer Assisted Radiology and Surgery"
+      url: "https://pubmed.ncbi.nlm.nih.gov/25847663/"
 
 # Team Section
 team_section:
@@ -118,11 +123,14 @@ team_section:
   description: "A multidisciplinary team working together to advance the understanding of the brain vessel tree through imaging and computational methods."
   lead:
     name: "Maria A. Zuluaga"
+    photo: "/assets/img/team/zuluaga.jpeg"
     bio: "Professor at <a href=\"#\">EURECOM</a> and Affiliate Faculty in the School of Biomedical Engineering & Imaging Sciences at <a href=\"#\">King's College London</a>."
     website: "#"
     linkedin: "#"
     scholar: "#"
   members:
+    # Add a "photo: /assets/img/team/<file>.jpeg" line once a real photo is available;
+    # without it, the grey circle placeholder is shown automatically.
     - name: "Name Surname"
       role: "PhD Student at EURECOM"
       website: "#"
@@ -138,7 +146,7 @@ team_section:
       website: "#"
       linkedin: "#"
       scholar: "#"
-    - name: "Name Surname3"
+    - name: "Name Surname"
       role: "PhD Student at EURECOM"
       website: "#"
       linkedin: "#"
@@ -164,27 +172,6 @@ contacts_section:
     - icon: "uil-university"
       label: "Institution"
       value: "EURECOM"
-
-# Footer Section
-footer_section:
-  links:
-    - label: "Research"
-      url: "#research"
-    - label: "News"
-      url: "#news"
-    - label: "Publications"
-      url: "#publications"
-    - label: "Team"
-      url: "#team"
-    - label: "Contacts"
-      url: "#contacts"
-  social:
-    - icon: "uil-globe"
-      url: "#"
-    - icon: "uil-linkedin-alt"
-      url: "#"
-    - icon: "uil-graduation-cap"
-      url: "#"
 ---
 <div class="content-wrapper">
 <header class="w-100">
