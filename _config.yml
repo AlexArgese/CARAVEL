@@ -1,5 +1,5 @@
-baseurl: ""
-url: ""
+baseurl: "/CARAVEL"
+url: "https://alexargese.github.io"
 
 # Build settings
 markdown: kramdown
