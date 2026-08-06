@@ -166,8 +166,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
-  height: 78px;
+  width: 320px;
+  height: 100px;
   margin: 0 auto;
 }
 // The official EU/ERC funding lockup packs a flag + logo + several lines
@@ -175,7 +175,6 @@
 // other, simpler partner logos to stay legible.
 .partner-logo-wrap-wide {
   width: 300px;
-  height: 212px;
 }
 .partner-logo {
   max-width: 100%;
@@ -225,33 +224,14 @@
   transform: translateY(-6px);
   box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.25);
 }
-.research-card-img-wrap {
-  background: #fff;
-  padding: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-.research-card-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: transform 0.35s ease;
-}
-.research-card:hover .research-card-img {
-  transform: scale(1.06);
-}
 .research-card-body {
-  padding: 1.5rem 1.5rem 1.75rem;
-  border-top: 1px solid rgba(7, 90, 128, 0.08);
+  padding: 1.75rem 1.75rem 2rem;
 }
 .research-card-number {
   color: #ff6062;
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
 }
 .research-card-title {
   color: #075a80;

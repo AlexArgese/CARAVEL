@@ -55,15 +55,16 @@ research_section:
   description: "CARAVEL studies the cerebrovascular system using advanced imaging and trustworthy AI to extract, model and analyse brain vessel trees across multiple spatial scales."
   focus_label: "Our research focuses on"
   items:
-    - image: "/assets/img/research_1.png"
-      title: "Image-based extraction"
-      text: "Developing robust methods to detect and reconstruct the brain vessel tree from neurovascular images across different modalities and resolutions."
-    - image: "/assets/img/research_2.png"
-      title: "Modelling & representation"
-      text: "Building structured, multi-scale representations of the vascular network to capture its complexity and connectivity."
-    - image: "/assets/img/research_3.png"
-      title: "Analysis & understanding"
-      text: "Designing computational approaches to analyse vascular patterns and support scientific insight into brain structure."
+    - title: "Brain vessel tree representation"
+      text: "Building structured, multi-scale representations of the cerebrovascular network that capture its complexity and connectivity across imaging modalities."
+    - title: "Segmentation & Modeling"
+      text: "Developing robust, trustworthy AI methods to detect, segment and model the brain vessel tree from neurovascular images."
+    - title: "Neurovascular atlas construction"
+      text: "Constructing a spatio-temporal atlas of the cerebral vascular system to capture anatomical variability across scales and populations."
+    - title: "Clinical Usage"
+      text: "Translating CARAVEL's methods into tools that support clinical decision-making and neurovascular risk assessment."
+    - title: "Reproducibility & open-source"
+      text: "Releasing open datasets, code and benchmarks so the research community can validate, reuse and build on CARAVEL's results."
 
 # Publications Section
 publications_section:

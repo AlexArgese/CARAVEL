@@ -14,17 +14,12 @@
     <div class="text-center mb-8">
       <span class="research-caravel-focus text-line">{{ page.research_section.focus_label }}</span>
     </div>
-    <div class="row gy-6">
+    <div class="row gy-6 justify-content-center">
       {% for item in page.research_section.items %}
-      <div class="col-md-4">
+      <div class="col-sm-6 col-lg-4">
         <div class="research-card h-100">
-          <div class="research-card-img-wrap hover-scale">
-            {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="research-card-img">
-            {% endif %}
-          </div>
           <div class="research-card-body">
-            <span class="research-card-number d-block mb-2">0{{ forloop.index }}</span>
+            <span class="research-card-number d-block mb-3">0{{ forloop.index }}</span>
             <h4 class="research-card-title mb-3">{{ item.title }}</h4>
             <p class="research-card-text mb-0">{{ item.text }}</p>
           </div>
