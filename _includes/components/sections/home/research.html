@@ -14,24 +14,24 @@
     <div class="text-center mb-8">
       <span class="research-caravel-focus text-line">{{ page.research_section.focus_label }}</span>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+    <div class="row align-items-center gy-6 gx-lg-8">
+      <div class="col-lg-5">
+        <div class="research-accordion-media">
+          <img src="{{ page.research_section.items.first.image | relative_url }}" alt="" class="research-accordion-media-img" id="research-active-image">
+        </div>
+      </div>
+      <div class="col-lg-7">
         <div id="accordion-research" class="accordion-wrapper research-accordion">
           {% for item in page.research_section.items %}
           <div class="card accordion-item">
             <div class="card-header" id="research-heading-{{ forloop.index }}">
-              <button class="{% unless forloop.first %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#research-collapse-{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="research-collapse-{{ forloop.index }}">
+              <button class="{% unless forloop.first %}collapsed{% endunless %}" data-bs-toggle="collapse" data-bs-target="#research-collapse-{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="research-collapse-{{ forloop.index }}"{% if item.image %} data-research-image="{{ item.image | relative_url }}"{% endif %}>
                 <span class="research-accordion-number">0{{ forloop.index }}</span>{{ item.title }}
               </button>
             </div>
             <div id="research-collapse-{{ forloop.index }}" class="collapse{% if forloop.first %} show{% endif %}" aria-labelledby="research-heading-{{ forloop.index }}" data-bs-parent="#accordion-research">
               <div class="card-body">
-                <div class="research-accordion-content{% unless item.image %} research-accordion-content-noimg{% endunless %}">
-                  {% if item.image %}
-                  <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="research-accordion-img">
-                  {% endif %}
-                  <p class="mb-0">{{ item.text }}</p>
-                </div>
+                <p class="mb-0">{{ item.text }}</p>
               </div>
             </div>
           </div>
@@ -42,4 +42,23 @@
   </div>
   <!-- /.container -->
 </section>
+<script>
+(function () {
+  var accordion = document.getElementById('accordion-research');
+  var img = document.getElementById('research-active-image');
+  if (!accordion || !img) return;
+  var buttons = accordion.querySelectorAll('[data-research-image]');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var src = btn.getAttribute('data-research-image');
+      if (!src) return;
+      img.style.opacity = 0;
+      setTimeout(function () {
+        img.src = src;
+        img.style.opacity = 1;
+      }, 150);
+    });
+  });
+})();
+</script>
 {% endif %}
