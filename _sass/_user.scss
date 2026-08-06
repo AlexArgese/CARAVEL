@@ -170,6 +170,13 @@
   height: 78px;
   margin: 0 auto;
 }
+// The official EU/ERC funding lockup packs a flag + logo + several lines
+// of mandatory text into one image, so it needs more room than the
+// other, simpler partner logos to stay legible.
+.partner-logo-wrap-wide {
+  width: 300px;
+  height: 212px;
+}
 .partner-logo {
   max-width: 100%;
   max-height: 100%;

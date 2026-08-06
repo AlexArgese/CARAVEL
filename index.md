@@ -38,12 +38,11 @@ hero:
 partners:
   enable: true
   logos:
-    - image: /assets/img/erc.png
-      alt: "European Research Council (ERC)"
+    - image: /assets/img/LOGO_ERC-FLAG_FP.png
+      alt: "Funded by the European Union - European Research Council"
+      wide: true
     - image: /assets/img/eurecom.png
       alt: "EURECOM Sophia Antipolis"
-    - image: /assets/img/ue.png
-      alt: "Funded by the European Union"
 
 # News Section
 news_section:
