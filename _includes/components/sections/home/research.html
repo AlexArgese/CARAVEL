@@ -17,7 +17,9 @@
     <div class="row align-items-center gy-6 gx-lg-8">
       <div class="col-lg-5">
         <div class="research-accordion-media">
+          <span class="research-accordion-media-badge" id="research-active-badge">01</span>
           <img src="{{ page.research_section.items.first.image | relative_url }}" alt="" class="research-accordion-media-img" id="research-active-image">
+          <p class="research-accordion-media-empty d-none" id="research-active-empty">Illustration coming soon</p>
         </div>
       </div>
       <div class="col-lg-7">
@@ -46,17 +48,27 @@
 (function () {
   var accordion = document.getElementById('accordion-research');
   var img = document.getElementById('research-active-image');
+  var empty = document.getElementById('research-active-empty');
+  var badge = document.getElementById('research-active-badge');
   if (!accordion || !img) return;
-  var buttons = accordion.querySelectorAll('[data-research-image]');
+  var buttons = accordion.querySelectorAll('.card-header button');
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var src = btn.getAttribute('data-research-image');
-      if (!src) return;
-      img.style.opacity = 0;
+      var number = btn.querySelector('.research-accordion-number').textContent;
+      img.classList.add('is-swapping');
       setTimeout(function () {
-        img.src = src;
-        img.style.opacity = 1;
-      }, 150);
+        if (src) {
+          img.src = src;
+          img.classList.remove('d-none');
+          empty.classList.add('d-none');
+        } else {
+          img.classList.add('d-none');
+          empty.classList.remove('d-none');
+        }
+        badge.textContent = number;
+        img.classList.remove('is-swapping');
+      }, 200);
     });
   });
 })();
