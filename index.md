@@ -201,4 +201,3 @@ contacts_section:
 {% include components/sections/home/contacts.html %}
 {% include components/footer/caravel-footer.html %}
 </div>
-```
