@@ -52,8 +52,23 @@
   var badge = document.getElementById('research-active-badge');
   if (!accordion || !img) return;
   var buttons = accordion.querySelectorAll('.card-header button');
+
+  // Bootstrap's collapse data-api handler runs on a document-level click
+  // listener, so a normal listener on the button (bubble/target phase)
+  // fires too late to stop it from closing an already-open item. A
+  // capture-phase document listener runs first and can block it.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('#accordion-research .card-header button');
+    if (btn && btn.getAttribute('aria-expanded') === 'true') {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }
+  }, true);
+
   buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      if (btn.getAttribute('aria-expanded') === 'true') return;
       var src = btn.getAttribute('data-research-image');
       var number = btn.querySelector('.research-accordion-number').textContent;
       img.classList.add('is-swapping');
