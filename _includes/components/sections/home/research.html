@@ -15,7 +15,7 @@
       <span class="research-caravel-focus text-line">{{ page.research_section.focus_label }}</span>
     </div>
     <div class="row align-items-center gy-6 gx-lg-8">
-      <div class="col-lg-5">
+      <div class="col-lg-5 d-none d-lg-block">
         <div class="research-accordion-media">
           <span class="research-accordion-media-badge" id="research-active-badge">01</span>
           <img src="{{ page.research_section.items.first.image | relative_url }}" alt="" class="research-accordion-media-img" id="research-active-image">
@@ -33,6 +33,9 @@
             </div>
             <div id="research-collapse-{{ forloop.index }}" class="collapse{% if forloop.first %} show{% endif %}" aria-labelledby="research-heading-{{ forloop.index }}" data-bs-parent="#accordion-research">
               <div class="card-body">
+                {% if item.image %}
+                <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="research-accordion-inline-img d-lg-none">
+                {% endif %}
                 <p class="mb-0">{{ item.text }}</p>
               </div>
             </div>
@@ -51,7 +54,6 @@
   var empty = document.getElementById('research-active-empty');
   var badge = document.getElementById('research-active-badge');
   if (!accordion || !img) return;
-  var buttons = accordion.querySelectorAll('.card-header button');
 
   // Bootstrap's collapse data-api handler runs on a document-level click
   // listener, so a normal listener on the button (bubble/target phase)
@@ -66,13 +68,23 @@
     }
   }, true);
 
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      if (btn.getAttribute('aria-expanded') === 'true') return;
+  // Swap the image off Bootstrap's own "shown" event instead of the click,
+  // since click-handler ordering relative to Bootstrap's own toggle isn't
+  // reliable, but this event only ever fires once a panel has actually
+  // finished opening. Cancel any still-pending swap first so clicking
+  // through several items quickly can't let an old timeout land last and
+  // clobber the most recent selection.
+  var swapTimeout = null;
+  var panels = accordion.querySelectorAll('.collapse');
+  panels.forEach(function (panel) {
+    panel.addEventListener('shown.bs.collapse', function () {
+      var btn = accordion.querySelector('[data-bs-target="#' + panel.id + '"]');
+      if (!btn) return;
       var src = btn.getAttribute('data-research-image');
       var number = btn.querySelector('.research-accordion-number').textContent;
+      if (swapTimeout) clearTimeout(swapTimeout);
       img.classList.add('is-swapping');
-      setTimeout(function () {
+      swapTimeout = setTimeout(function () {
         if (src) {
           img.src = src;
           img.classList.remove('d-none');
@@ -83,6 +95,7 @@
         }
         badge.textContent = number;
         img.classList.remove('is-swapping');
+        swapTimeout = null;
       }, 200);
     });
   });
