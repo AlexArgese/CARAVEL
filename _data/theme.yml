@@ -6,8 +6,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 favicon: "/assets/img/brain-icon.png"
 
 # Seo Meta Settings
-meta_og_image: "/assets/img/meta-image.webp"
-meta_twitter_image: "/assets/img/meta-image.webp"
+meta_og_image: "/assets/img/logo_og.png"
+meta_twitter_image: "/assets/img/logo_og.png"
 
 # Site Wide Theme Color Setting
 color_scheme: # Aqua Fuchsia Grape Green Leaf Navy Orange Pink Purple Red Sky Violet Yellow

@@ -64,9 +64,11 @@ research_section:
     - image: "/assets/img/research_3.png"
       title: "Neurovascular atlas construction"
       text: "Constructing a spatio-temporal atlas of the cerebral vascular system to capture anatomical variability across scales and populations."
-    - title: "Clinical Usage"
+    - image: "/assets/img/research_4.png"
+      title: "Clinical Usage"
       text: "Translating CARAVEL's methods into tools that support clinical decision-making and neurovascular risk assessment."
-    - title: "Reproducibility & open-source"
+    - image: "/assets/img/research_5.png"
+      title: "Reproducibility & open-source"
       text: "Releasing open datasets, code and benchmarks so the research community can validate, reuse and build on CARAVEL's results."
 
 # Publications Section
