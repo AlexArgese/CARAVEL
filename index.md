@@ -14,8 +14,7 @@ banner:
   text: "LATEST NEWS - CARAVEL paper accepted at MICCAI 2026"
   link:
     label: "Read more"
-    url: "#"
-    target: "_blank"
+    url: "/CARAVEL/news/caravel-paper-accepted-miccai-2026/"
 
 # Hero Section
 hero:
