@@ -419,6 +419,11 @@
 }
 .pub-action {
   white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.25rem;
+  row-gap: 0.4rem;
 }
 .pub-link {
   color: #075a80;

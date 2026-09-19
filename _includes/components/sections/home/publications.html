@@ -26,6 +26,11 @@
           <a href="{{ pub.url }}" class="pub-link" target="_blank">
             <i class="uil uil-file-alt"></i> View paper <i class="uil uil-arrow-up-right"></i>
           </a>
+          {% if pub.github %}
+          <a href="{{ pub.github }}" class="pub-link" target="_blank" rel="noopener" aria-label="GitHub repository">
+            <i class="uil uil-github"></i> Code <i class="uil uil-arrow-up-right"></i>
+          </a>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
