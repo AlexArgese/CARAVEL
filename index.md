@@ -146,8 +146,7 @@ team_section:
   cta:
     text: "Interested in joining the team?"
     label: "View open positions"
-    # Either a web page ("https://...") or an email ("mailto:name@eurecom.fr")
-    url: "#"
+    url: "mailto:maria.zuluaga@eurecom.fr"
 
 # Contacts Section
 contacts_section:
