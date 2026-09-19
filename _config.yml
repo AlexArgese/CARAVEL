@@ -68,6 +68,7 @@ exclude:
   - .jekyll-cache/
   - gemfiles/
   - README.md
+  - HOW_TO_EDIT.md
   - package.json
   - package-lock.json
   - yarn.lock
